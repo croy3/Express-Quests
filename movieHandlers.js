@@ -70,7 +70,7 @@ const postMovie = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error saving the movie");
+      res.status(422).send("Error saving the movie");
     });
 };
 
@@ -92,7 +92,7 @@ const updateMovie = (req, res) => {
   })
   .catch((err) => {
     console.error(err);
-    res.status(500).send("Error editing the movie");
+    res.status(422).send("Error editing the movie");
   });
 };
 

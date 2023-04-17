@@ -43,7 +43,7 @@ const getUsers = (req, res) => {
       })
       .catch((err) => {
         console.error(err);
-        res.status(500).send("Error saving the user");
+        res.status(422).send("Error saving the user");
       });
   };
 
@@ -65,7 +65,7 @@ const getUsers = (req, res) => {
     })
     .catch((err) => {
       console.error(err);
-      res.status(500).send("Error editing the user");
+      res.status(422).send("Error editing the user");
     });
   };
 
